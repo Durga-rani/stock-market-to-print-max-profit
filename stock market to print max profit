@@ -1,0 +1,62 @@
+#include<stdio.h>
+int main(){
+ int days;
+ scanf("%d",&days);
+ int arr[days];
+ for(int itr = 0 ; itr < days ; scanf("%d",&arr[itr++]));
+ int max = 0 ;
+ int min = arr[0];
+ for(int itr = 1 ; itr < days ; itr++){
+    if(min > arr[itr]){
+        min = arr[itr];
+    }
+    else{
+       int ref = arr[itr] - min;
+       if(ref > max){
+        max = ref;
+       }
+    }
+ }
+  printf("max profit:%d",max);
+}
+OUTPUT:
+6
+7 1 5 6 3 4
+max profit:5
+explanation :
+on 4th day we get profit of 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
